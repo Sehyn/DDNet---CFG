@@ -1,0 +1,2 @@
++fire
+bind o exec binds\emote_spam\shoot\1.txt
