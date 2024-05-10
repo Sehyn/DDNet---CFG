@@ -43,7 +43,6 @@
             btn_credits = new Button();
             btn_supportme = new Button();
             lblversion = new Label();
-            lbldebug = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,7 +76,7 @@
             groupBox1.Controls.Add(lbldeepfly);
             groupBox1.Location = new Point(12, 93);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(743, 296);
+            groupBox1.Size = new Size(571, 112);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Configurator:";
@@ -157,7 +156,7 @@
             // 
             // btn_help
             // 
-            btn_help.Location = new Point(633, 9);
+            btn_help.Location = new Point(472, 9);
             btn_help.Name = "btn_help";
             btn_help.Size = new Size(111, 23);
             btn_help.TabIndex = 8;
@@ -167,7 +166,7 @@
             // 
             // btn_credits
             // 
-            btn_credits.Location = new Point(633, 67);
+            btn_credits.Location = new Point(472, 67);
             btn_credits.Name = "btn_credits";
             btn_credits.Size = new Size(111, 23);
             btn_credits.TabIndex = 9;
@@ -177,7 +176,7 @@
             // 
             // btn_supportme
             // 
-            btn_supportme.Location = new Point(633, 38);
+            btn_supportme.Location = new Point(472, 38);
             btn_supportme.Name = "btn_supportme";
             btn_supportme.Size = new Size(111, 23);
             btn_supportme.TabIndex = 10;
@@ -188,27 +187,17 @@
             // lblversion
             // 
             lblversion.AutoSize = true;
-            lblversion.Location = new Point(12, 398);
+            lblversion.Location = new Point(9, 209);
             lblversion.Name = "lblversion";
             lblversion.Size = new Size(36, 15);
             lblversion.TabIndex = 11;
             lblversion.Text = "[v1.0]";
             // 
-            // lbldebug
-            // 
-            lbldebug.AutoSize = true;
-            lbldebug.Location = new Point(12, 42);
-            lbldebug.Name = "lbldebug";
-            lbldebug.Size = new Size(41, 15);
-            lbldebug.TabIndex = 12;
-            lbldebug.Text = "debug";
-            // 
             // Configurator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(767, 422);
-            Controls.Add(lbldebug);
+            ClientSize = new Size(594, 233);
             Controls.Add(lblversion);
             Controls.Add(btn_supportme);
             Controls.Add(btn_credits);
@@ -242,6 +231,5 @@
         private Label lbltriplefly;
         private ComboBox cb_pseudofly;
         private Label lblpseudofly;
-        private Label lbldebug;
     }
 }

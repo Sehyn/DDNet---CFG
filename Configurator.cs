@@ -23,12 +23,13 @@ namespace DDNet___CFG
 
             // Set default value for the combo box
             SetDefaultComboBoxValue();
-            lbldebug.Text = DeepFlyOffFilePath;
             InitializePseudoFlyComboBox();
             InitializeTripleFlyComboBox();
             InitializeDummySpawnComboBox();
-
         }
+
+  
+
 
         private void SetDefaultComboBoxValue()
         {
@@ -73,6 +74,7 @@ namespace DDNet___CFG
             }
             return null; // Bind key not found
         }
+   
 
         private void InitializeDummySpawnComboBox()
         {
