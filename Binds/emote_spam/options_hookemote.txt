@@ -1,0 +1,6 @@
+cl_message_client_color 5635250
+echo Spam Mode: hookemote
+
+bind mouse2 "+hook;exec binds\emote_spam\hookemote\1.txt"
+unbind o
+bind shift+o exec binds\emote_spam\options_hookemote2.txt

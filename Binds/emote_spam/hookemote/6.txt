@@ -1,0 +1,2 @@
+emote 6
+bind mouse2 "+hook;exec binds\emote_spam\hookemote\7.txt"

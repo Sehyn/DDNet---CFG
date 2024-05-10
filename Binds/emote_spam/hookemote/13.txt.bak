@@ -1,0 +1,2 @@
+emote 13
+bind mouse2 exec binds\emote_spam\hookemote\14.txt
