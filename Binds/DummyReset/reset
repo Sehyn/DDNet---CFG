@@ -1,0 +1,4 @@
+cl_dummy_resetonswitch 0
+bind "z" exec binds\dummyreset\unreset
+cl_message_client_color 65451
+echo "Reset On Switch: Deactivated"

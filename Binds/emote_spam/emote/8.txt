@@ -1,0 +1,2 @@
+emote 8
+bind o exec binds\emote_spam\emote\9.txt

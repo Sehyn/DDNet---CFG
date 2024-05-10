@@ -1,0 +1,2 @@
++fire; emote 4
+bind o exec binds\emote_spam\emote+shoot\5.txt
