@@ -26,6 +26,7 @@ namespace DDNet___CFG
             lbldebug.Text = DeepFlyOffFilePath;
             InitializePseudoFlyComboBox();
             InitializeTripleFlyComboBox();
+            InitializeDummySpawnComboBox();
 
         }
 
@@ -72,6 +73,39 @@ namespace DDNet___CFG
             }
             return null; // Bind key not found
         }
+
+        private void InitializeDummySpawnComboBox()
+        {
+            // Set default value for the combo box
+            string dummySpawnOnFilePath = Path.Combine(PathHolder.FullPath, "binds", "DummySpawn", "[D]ON.cfg");
+            string defaultBindedKey = GetBindedKeyFromConfigFile(dummySpawnOnFilePath);
+            if (!string.IsNullOrEmpty(defaultBindedKey))
+            {
+                cb_dummyspawn.Items.Add(defaultBindedKey);
+                cb_dummyspawn.SelectedItem = defaultBindedKey;
+            }
+
+            // Handle selection change event
+            cb_dummyspawn.SelectedIndexChanged += (sender, e) =>
+            {
+                string newBindedKey = cb_dummyspawn.SelectedItem.ToString();
+                UpdateDummySpawnBindedKey(newBindedKey);
+            };
+        }
+
+        // Update the binded key in the [D]OFF.cfg and [D]ON.cfg files
+        private void UpdateDummySpawnBindedKey(string newBindedKey)
+        {
+            // Update the binded key in the [D]OFF.cfg file
+            string dummySpawnOffFilePath = Path.Combine(PathHolder.FullPath, "binds", "DummySpawn", "[D]OFF.cfg");
+            UpdateBindedKeyInFile(dummySpawnOffFilePath, newBindedKey);
+
+            // Update the binded key in the [D]ON.cfg file
+            string dummySpawnOnFilePath = Path.Combine(PathHolder.FullPath, "binds", "DummySpawn", "[D]ON.cfg");
+            UpdateBindedKeyInFile(dummySpawnOnFilePath, newBindedKey);
+        }
+
+
         private void InitializePseudoFlyComboBox()
         {
             // Set default value for the combo box
